@@ -21,6 +21,9 @@ const TouristsSpot = () => {
         sixSpots.map(spot=><Spot spot={spot}></Spot>)
     }
    </div>
+  <div className="flex justify-center my-8">
+     <Link to='/allTouristsSpot'><button className="btn btn-secondary ">Show All Tourists Spots</button></Link>
+  </div>
         </div>
     );
 };

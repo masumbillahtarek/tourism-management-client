@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
 
 
 const AllTouristsSpot = () => {
+    const{loading}=useContext(AuthContext)
+     if(loading){
+        return <div className="flex justify-center my-24"> <span className="loading  loading-spinner loading-lg"></span></div>
+    }
     const spots=useLoaderData()
     return (
         <div>

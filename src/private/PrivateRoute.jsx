@@ -4,7 +4,10 @@ import { Navigate } from "react-router-dom";
 
 
 const PrivateRoute = ({children}) => {
-    const{user}=useContext(AuthContext)
+    const{user,loading}=useContext(AuthContext)
+    if(loading){
+        return <div className="flex justify-center"> <span className="loading  loading-spinner loading-lg"></span></div>
+    }
     if(user){
 return children
     }
