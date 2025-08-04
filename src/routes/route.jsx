@@ -10,6 +10,8 @@ import MyList from "../pages/MyList";
 import PrivateRoute from "../private/PrivateRoute";
 import Home from "../pages/Home";
 import TouristsSpot from "../shared/TouristsSpot";
+import UpdateTouristSpot from "../pages/UpdateTouristSpot";
+import TouristsSpotDetails from "../pages/TouristsSpotDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,7 +40,18 @@ element:<Home></Home>
         },
         {
             path:'/myList',
-            element:<PrivateRoute><MyList></MyList></PrivateRoute>
+            element:<PrivateRoute><MyList></MyList></PrivateRoute>,
+             loader:()=>fetch('http://localhost:3000/touristsSpots')
+        },
+        {
+          path:'/update/:id',
+          element:<PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
+          loader:({params})=>fetch(`http://localhost:3000/touristsSpots/${params.id}`)
+        },
+        {
+            path:'/spotDetails/:id',
+          element:<PrivateRoute><TouristsSpotDetails></TouristsSpotDetails></PrivateRoute>,
+          loader:({params})=>fetch(`http://localhost:3000/touristsSpots/${params.id}`)
         }
     ]
   },

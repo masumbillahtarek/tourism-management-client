@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const AllTouristsSpot = () => {
@@ -15,7 +15,7 @@ const AllTouristsSpot = () => {
     );
 };
 const Spot=({spot})=>{
-    const{photo,spotName,cost,season,time,totalVisitors}=spot
+    const{_id,photo,spotName,cost,season,time,totalVisitors}=spot
     return(
                <div className="card bg-[#24232311] w-full shadow-xl">
   <figure className="px-10 pt-10">
@@ -38,7 +38,7 @@ const Spot=({spot})=>{
     </div>
    
     <div className="card-actions">
-      <button className="btn btn-primary">View Details</button>
+    <Link to={`/spotDetails/${_id}`}>  <button className="btn btn-primary">View Details</button></Link>
     </div>
   </div>
 </div>
