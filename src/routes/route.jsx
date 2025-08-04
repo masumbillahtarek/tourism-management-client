@@ -8,11 +8,17 @@ import AllTouristsSpot from "../pages/AllTouristsSpot";
 import AddTouristsSpot from "../pages/AddTouristsSpot";
 import MyList from "../pages/MyList";
 import PrivateRoute from "../private/PrivateRoute";
+import Home from "../pages/Home";
+import TouristsSpot from "../shared/TouristsSpot";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children:[
+      {
+path:'/',
+element:<Home></Home>
+      },
         {
             path:'/login',
             element:<Login></Login>

@@ -1,9 +1,12 @@
+import Banner from "../shared/Banner";
+import TouristsSpot from "../shared/TouristsSpot";
 
 
 const Home = () => {
     return (
         <div>
-            <h2>Home</h2>
+        <Banner></Banner>
+        <TouristsSpot></TouristsSpot>
         </div>
     );
 };

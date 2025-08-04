@@ -5,7 +5,7 @@ const AllTouristsSpot = () => {
     const spots=useLoaderData()
     return (
         <div>
-            <h2>All Tourists Spot : {spots.length}</h2>
+            <h2 className="text-3xl text-center my-6">All Tourists Spot : {spots.length}</h2>
    <div className="grid grid-cols-2 gap-8">
     {
         spots.map(spot=><Spot spot={spot}></Spot>)
@@ -17,7 +17,7 @@ const AllTouristsSpot = () => {
 const Spot=({spot})=>{
     const{photo,spotName,cost,season,time,totalVisitors}=spot
     return(
-               <div className="card bg-base-100 w-full shadow-xl">
+               <div className="card bg-[#24232311] w-full shadow-xl">
   <figure className="px-10 pt-10">
     <img
       src={photo}
