@@ -19,7 +19,7 @@ const UpdateTouristSpot = () => {
         const description=form.description.value
         console.log(name,email,photo,spotName,countryName,spotLocation,cost,season,time,totalVisitors,description)
         const updatedSpot={name,email,photo,spotName,countryName,spotLocation,cost,season,time,totalVisitors,description}
-        fetch(`http://localhost:3000/touristsSpots/${spot._id}`,{
+        fetch(`https://tourism-management-server-demta93rh.vercel.app/touristsSpots/${spot._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

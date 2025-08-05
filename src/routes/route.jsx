@@ -32,7 +32,7 @@ element:<Home></Home>
         {
             path:'/allTouristsSpot',
             element:<AllTouristsSpot></AllTouristsSpot>,
-            loader:()=>fetch('http://localhost:3000/touristsSpots')
+            loader:()=>fetch('https://tourism-management-server-demta93rh.vercel.app/touristsSpots')
         },
         {
             path:'/addTouristsSpot',
@@ -41,17 +41,17 @@ element:<Home></Home>
         {
             path:'/myList',
             element:<PrivateRoute><MyList></MyList></PrivateRoute>,
-             loader:()=>fetch('http://localhost:3000/touristsSpots')
+             loader:()=>fetch('https://tourism-management-server-demta93rh.vercel.app/touristsSpots')
         },
         {
           path:'/update/:id',
           element:<PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:3000/touristsSpots/${params.id}`)
+          loader:({params})=>fetch(`https://tourism-management-server-demta93rh.vercel.app/touristsSpots/${params.id}`)
         },
         {
             path:'/spotDetails/:id',
           element:<PrivateRoute><TouristsSpotDetails></TouristsSpotDetails></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:3000/touristsSpots/${params.id}`)
+          loader:({params})=>fetch(`https://tourism-management-server-demta93rh.vercel.app/touristsSpots/${params.id}`)
         }
     ]
   },
